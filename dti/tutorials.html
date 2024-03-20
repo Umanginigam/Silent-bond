@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .video-overlay-text {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .video-overlay-text {
+                font-size: 12px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .footer p {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Explore Awesome Videos</h1>
+    </div>
+
+    <div class="container">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/0FcwzMq4iWg?si=kX1DeMFW2lgVHmTf" title="video1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-overlay">
+                <p class="video-overlay-text">Click to Play</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/v1desDduz5M?si=wsi6TvmndY71rYX7" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-overlay">
+                <p class="video-overlay-text">Click to Play</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Vj_13bdU4dU?si=ZofD1VWPKKdnWwxX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-overlay">
+                <p class="video-overlay-text">Click to Play</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/jCUaMdXsI7w?si=HAmGKP-_7f2tHt5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-overlay">
+                <p class="video-overlay-text">Click to Play</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JPV-vboWfhY?si=OcRx7oLsR0FBbRww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-overlay">
+                <p class="video-overlay-text">Click to Play</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Video Gallery. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
